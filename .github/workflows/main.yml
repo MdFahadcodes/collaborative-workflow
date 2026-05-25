@@ -17,8 +17,6 @@ jobs:
       # Step 2: Update index.html
       - name: Update HTML
         run: |
-          # Check if the GitHub actor is MdFahadcodes
-          # Run the following CLI command to update index.html
           if [ "${{ github.actor }}" == "MdFahadcodes" ]; then
             sed -i '/<\/body>/i <p>Updated by MdFahadcodes on '"$(date)"'</p>' index.html
           fi
